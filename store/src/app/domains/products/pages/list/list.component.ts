@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ProductComponent } from "../../components/product/product.component";
 import { CommonModule } from '@angular/common';
-
+import { Product } from '../../../shared/models/product.model';
 @Component({
   selector: 'app-list',
   imports: [ProductComponent],
@@ -9,6 +9,36 @@ import { CommonModule } from '@angular/common';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
+  
+  products = signal(<Product[]>([]));
+
+  constructor(){
+    const initProducts: Product[] = [
+      {
+        id: 1,
+        title: 'Producto 1',
+        price: 125,
+        image: 'https://picsum.photos/320/320?r23',
+        cretionAt: new Date().toISOString()
+      },
+      {
+        id: 2,
+        title: 'Producto 2',
+        price: 175,
+        image: 'https://picsum.photos/320/320?r24',
+        cretionAt: new Date().toISOString()
+      },
+      {
+        id: 3,
+        title: 'Producto 3',
+        price: 199,
+        image: 'https://picsum.photos/320/320?r25',
+        cretionAt: new Date().toISOString()
+      }
+    ]
+    this.products.set(initProducts);
+  }
+
   addToCartFromChild(event:string){
     console.log(`Estamos en el padre: ${event}`);
   }

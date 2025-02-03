@@ -42,10 +42,10 @@ export class CounterComponent {
     console.log('duration => ', this.duration);
     console.log('message => ', this.message);
 
-    this.setIntervalRef = window.setInterval(()=>{
+    /*this.setIntervalRef = window.setInterval(()=>{
       this.counter.update(statePrev => statePrev + 1);
       console.log('setInterval');
-    }, 1000)
+    }, 1000)*/
   }
 
   ngAfterViewInit(){
