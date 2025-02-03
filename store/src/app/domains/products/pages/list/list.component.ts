@@ -34,6 +34,27 @@ export class ListComponent {
         price: 199,
         image: 'https://picsum.photos/320/320?r25',
         cretionAt: new Date().toISOString()
+      },
+      {
+        id: 4,
+        title: 'Producto 4',
+        price: 125,
+        image: 'https://picsum.photos/320/320?r26',
+        cretionAt: new Date().toISOString()
+      },
+      {
+        id: 5,
+        title: 'Producto 5',
+        price: 175,
+        image: 'https://picsum.photos/320/320?r27',
+        cretionAt: new Date().toISOString()
+      },
+      {
+        id: 6,
+        title: 'Producto 6',
+        price: 199,
+        image: 'https://picsum.photos/320/320?r28',
+        cretionAt: new Date().toISOString()
       }
     ]
     this.products.set(initProducts);
