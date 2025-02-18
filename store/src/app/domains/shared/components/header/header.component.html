@@ -1,6 +1,5 @@
-
-
-<nav class="bg-white dark:bg-gray-900  w-full  top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+<h3 class="py-2 text-center text-white text-base font-semibold bg-blue-900">Envíos GRATIS en compras superiores a $2,499 y 3 o 6 MSI ¡Compra Ahora!</h3>
+<nav class="bg-white dark:bg-gray-900  w-full px-10  top-0 start-0 border-b border-gray-200 dark:border-gray-600">
     <div class="w-full flex flex-wrap items-center justify-between mx-auto py-4">
     
     <!-- Logo -->
@@ -70,13 +69,17 @@
       <!--Icono botón carrito de compra-->
 
       <div class="md:order-3">
-        <button class="pr-3" (click)="sidebar.toggleSidebar()">
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
-              </svg>
+        <button type="button" class="relative inline-flex items-center p-3 mr-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" (click)="drawer.toggleDrawer()">
+          <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+          </svg>          
+            <span class="sr-only">Cart</span>
+            <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">{{ cartService.cart().length }}</div>
         </button>
       </div>
+
     </div>
   </nav>
-  <app-sidebar></app-sidebar>
+  <app-drawer></app-drawer>
+
   

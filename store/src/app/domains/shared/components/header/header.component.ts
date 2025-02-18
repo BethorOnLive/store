@@ -1,13 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
-import { SidebarComponent } from '../cart/sidebar/sidebar.component'
+import { CommonModule } from '@angular/common';
+import { DrawerComponent } from '../cart/sidebar/drawer.component';
+import { CartService } from '../../services/cart.service';  
 
 @Component({
   selector: 'app-header',
-  imports: [SidebarComponent],
+  imports: [DrawerComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @ViewChild(SidebarComponent) sidebar!: SidebarComponent;
+  @ViewChild(DrawerComponent) drawer!: DrawerComponent;
   
+  constructor(public cartService: CartService){}
 }
