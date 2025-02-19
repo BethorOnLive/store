@@ -1,8 +1,8 @@
 import { Component, Input, Output, EventEmitter, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Product } from '../../../shared/models/product.model';
+import { Product } from '@shared/models/product.model';
 import { Popover } from 'flowbite';
-import { CartService } from '../../../shared/services/cart.service';
+import { CartService } from '@shared/services/cart.service';
 
 @Component({
   selector: 'app-product',

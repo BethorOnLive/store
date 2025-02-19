@@ -1,7 +1,7 @@
 import { Component, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartService } from '../../../services/cart.service';
-import { Product } from '../../../models/product.model';
+import { CartService } from '@services/cart.service';
+import { Product } from '@models/product.model';
 
 @Component({
   selector: 'app-drawer',
