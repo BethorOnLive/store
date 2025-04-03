@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Product } from '@shared/models/product.model';
 import { Popover } from 'flowbite';
 import { CartService } from '@shared/services/cart.service';
+import { TimeAgoPipe } from '@shared/pipes/time-ago.pipe';
 
 @Component({
   selector: 'app-product',
-  imports: [CommonModule],
+  imports: [CommonModule, TimeAgoPipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })

@@ -40,10 +40,10 @@ export class ListComponent {
     .subscribe({
       next: (products) =>{
         this.products.set(products)
+        console.log("Estado actualizado:", this.products());
       },
       error: (err) => {
         console.error("Error al obtener productos:", err);
-        // Puedes agregar más lógica, como mostrar un mensaje al usuario
       }
     })
   }
